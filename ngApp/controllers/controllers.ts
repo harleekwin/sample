@@ -1,4 +1,4 @@
-namespace app.Controllers {
+namespace test.Controllers {
   export class HomeController {
     public file;
     public productToSave;
@@ -20,5 +20,5 @@ namespace app.Controllers {
     }
   }
 
-  angular.module('app').controller('HomeController', HomeController);
+  angular.module('test').controller('HomeController', HomeController);
 }

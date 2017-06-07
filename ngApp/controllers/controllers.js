@@ -1,5 +1,5 @@
-var app;
-(function (app) {
+var test;
+(function (test) {
     var Controllers;
     (function (Controllers) {
         var HomeController = (function () {
@@ -20,6 +20,6 @@ var app;
             return HomeController;
         }());
         Controllers.HomeController = HomeController;
-        angular.module('app').controller('HomeController', HomeController);
-    })(Controllers = app.Controllers || (app.Controllers = {}));
-})(app || (app = {}));
+        angular.module('test').controller('HomeController', HomeController);
+    })(Controllers = test.Controllers || (test.Controllers = {}));
+})(test || (test = {}));

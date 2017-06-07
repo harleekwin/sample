@@ -7,7 +7,7 @@ var router = express.Router();
 router.get('/', function (req, res) {
     var fileId = new mongodb.ObjectID(req.params['id']);
     db_1.default.db.collection('file').findOne(fileId).then(function (file) {
-        res.json(file);
+        res.json(products);
     });
 });
 router.get('/', function (req, res) {

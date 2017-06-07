@@ -1,7 +1,7 @@
 'use strict';
 
 namespace app {
-  angular.module('app', ['ui.router', 'ngResource', 'ui.bootstrap', 'angular-filepicker'])
+  angular.module('test', ['ui.router', 'ngResource', 'ui.bootstrap', 'angular-filepicker'])
     .config((
       $stateProvider: ng.ui.IStateProvider,
       $locationProvider: ng.ILocationProvider,
@@ -12,13 +12,16 @@ namespace app {
 
       $stateProvider.state('Home', {
         url: '/',
-        templateUrl: '/templates/home.html',
-        controller: app.Controllers.HomeController,
-        controllerAs: 'vm'
-      });
+        templateUrl: '/ngApp/views/home.html',
+        controller: test.Controllers.HomeController,
+        controllerAs: 'controller'
+      })
+        .state('notFound', {
+          url: '/notFound',
+          templateUrl: '/ngApp/views/notFound.html'
+        });
 
-      $urlRouterProvider.otherwise('/');
+      $urlRouterProvider.otherwise('/notFound');
       $locationProvider.html5Mode(true);
 
     });
-}
